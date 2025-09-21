@@ -63,7 +63,9 @@ function draw() {
     resetObject(fallingObject);
     fallingObject.color = color(random(255), random(255), random(255));
   } else if (fallingObject.y >= height){
-    score -= 1;
+    if (score >0) {
+      score -= 1;
+    }
     resetObject(fallingObject);
     fallingObject.color = color(random(255), random(255), random(255));
   }
@@ -73,7 +75,9 @@ function draw() {
     resetObject(fallingObject2);
     fallingObject2.color = color(random(255), random(255), random(255));
   } else if (fallingObject2.y >= height){
-    score -= 1;
+    if (score > 0){
+      score -= 1;
+    }
     resetObject(fallingObject2);
     fallingObject2.color = color(random(255), random(255), random(255));
   }
